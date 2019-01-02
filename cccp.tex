@@ -13,7 +13,7 @@
 \fancypagestyle{plain}{%
    \fancyhf{} %
    \fancyfoot[L]{ACM SIGCOMM Computer Communication Review}%
-   \fancyfoot[R]{Volume 49 Issue 2, April 2019}%
+   \fancyfoot[R]{Volume 49 Issue 1, January 2019}%
 }
 \pagestyle{plain}
 
@@ -21,7 +21,7 @@
 \fancypagestyle{firstpagestyle}{%
    \fancyhf{} %
    \fancyfoot[L]{ACM SIGCOMM Computer Communication Review}%
-   \fancyfoot[R]{Volume 49 Issue 2, April 2019}%
+   \fancyfoot[R]{Volume 49 Issue 1, January 2019}%
 }
 
 % Add editorial note
@@ -90,9 +90,24 @@
 	build out this vision with us.
 \end{abstract}
 
+\begin{CCSXML}
+<ccs2012>
+<concept>
+<concept_id>10002944.10011122.10003459</concept_id>
+<concept_desc>General and reference~Computing standards, RFCs and guidelines</concept_desc>
+<concept_significance>500</concept_significance>
+</concept>
+</ccs2012>
+\end{CCSXML}
+
+\ccsdesc[500]{General and reference~Computing standards, RFCs and guidelines}
+
+\keywords{Publishing, Science, Reproducibility}
+
 \maketitle
 
-\section{Motivation}\label{sec:intro}
+\section{Motivation}
+\label{sec:intro}
 
 Scientific papers were born as a means to share novel scientific knowledge.
 However, over time publications have also become the main metric for career
@@ -101,14 +116,15 @@ generation of ideas, data and results to how they are shared. If we step back
 and look at the currently established process for scientific paper authoring and
 publishing, including conventions and formats, it is clear there is room for
 optimization for the good of science and education (e.g.,  have we struck the
-right balance between “secrecy” and openness? Are there opportunities from
+right balance between confidentiality and openness? Are there opportunities from
 recent technologies and collaborative practices that we can leverage?)
 
 Discussion at various venues, including the CAIDA AIMS workshop in March 2018
-and the seminar  “Encouraging Reproducibility in Scientific Research of the
-Internet” at Schloss Dagstuhl in October 2018, identified issues with the
-publishing ecosystem through which Internet measurement studies are disseminated
-that have an impact on reproducibility and verifiability of Internet science.
+\cite{aims-presentation} and the seminar ``Encouraging Reproducibility in
+Scientific Research of the Internet`` at Schloss Dagstuhl in October 2018
+\cite{dagstuhl-site}, identified issues with the publishing ecosystem, through
+which Internet measurement studies are disseminated, that have an impact on
+reproducibility and verifiability of Internet science.
 
 The current publication ecosystem discourages incremental work. Together with an
 academic emphasis on novelty (whether that novelty is of improved utility or
@@ -140,11 +156,12 @@ of our proposal is instead to suggest ways in which we, as a community, can
 address the issues above while retaining positive aspects of the current
 publication process.
 
-\section{A Vision for the Future}\label{sec:vision}
+\section{A Vision for the Future}
+\label{sec:vision}
 
 We propose to leverage recent developments in platforms and tools for data
 science and scientific collaboration to build an experimental publishing
-ecosystem for Internet measurements based on hyperpapers. The technical details
+ecosystem for Internet measurements based on {\em hyperpapers}. The technical details
 of this experiment are left to future work, but the outlines of the properties
 of these papers already seem clear:
 
@@ -158,7 +175,7 @@ supporting easy exploratory analysis of a dataset and/or measurement analysis
 methodology as well as incremental changes to published work. In any case, the
 hyperpaper includes one or more rendered versions, both for compatibility with
 existing publishing channels (e.g., PDF) and to minimize the requirements for
-the (perhaps vast majority) of readers who will not want to use the paper’s
+the (perhaps vast majority) of readers who will not want to use the paper's
 interactive features.
 
 The raw source data may be included with the hyperpaper either by value or by
@@ -186,26 +203,27 @@ creation of multiple papers on a subject to multiple venues,
 e.g.~\cite{Dhamdhere18} and \cite{Clark18}.
 
 Taken to its logical conclusion, multilevel hyperpapers allow a full explanation
-and report on a research project’s activity and the evolution of the chain of
+and report on a research project's activity and the evolution of the chain of
 hypotheses, addressing the death of negative results, while maintaining
-narrative coherence and conciseness in the paper’s main “trunk”. While this
+narrative coherence and conciseness in the paper's main ``trunk'' While this
 throws up new questions, e.g., for page counts and the review process, this
 could be addressed by considering all extensions beyond this trunk as appendices
 for review purposes.
 
 \textbf{Hyperpapers are open and collaborative.}  The self-contained,
-interactive, and multilevel nature of hyperpapers enables — indeed, may require
-— entirely new ways of working together as researchers. Starting incremental
-work on a paper, or beginning to verify and reproduce it, becomes a simple
-matter of forking it, given permission to access the data. To the extent that
-the hyperpaper infrastructure is integrated with a collaboration platform,
-papers can become living projects, with researchers performing associated work,
-interdisciplinary co-authors writing expansions for specific audiences beyond
-the usual networking conference crowd, and even reviewers becoming part of a
-long-running, data-centered conversation about a particular hypothesis of how
-the Internet is.
+interactive, and multilevel nature of hyperpapers enables ---indeed, may
+require--- entirely new ways of working together as researchers. Starting
+incremental work on a paper, or beginning to verify and reproduce it, becomes a
+simple matter of forking it, given permission to access the data. To the extent
+that the hyperpaper infrastructure is integrated with a collaboration platform,
+papers can become open and living projects, with researchers performing
+associated work, interdisciplinary co-authors writing expansions for specific
+audiences beyond the usual networking conference crowd, and even reviewers
+becoming part of a long-running, data-centered conversation about a particular
+hypothesis of how the Internet is.
 
-\section{How do we get there?}\label{sec:how}
+\section{How do we get there?}
+\label{sec:how}
 
 As in all things scientific, by standing on the shoulders of giants. While this
 vision may seem like science fiction, akin to mid-century utopian writing about
@@ -223,11 +241,11 @@ interactive visualizations is supported by data analysis notebooks such as
 JupyterLab and Apache Zeppelin. GitHub has emerged as the de facto standard for
 integrating version control of digital artefacts with a collaboration
 environment, and its model of working is suited to open collaborative papers as
-we envision them, which have a fair amount in common with the long-running open
-source projects GitHub was originally built to support. Of course, all of these
-technologies are supported by the web platform, decades of continuous investment
-in which has brought us to a world where almost all of the work of research can
-be done in a standard browser.
+we envision them, which have a fair amount in common with the long-running
+open-source projects GitHub was originally built to support. Of course, all of
+these technologies are supported by the web platform, decades of continuous
+investment in which has brought us to a world where almost all of the work of
+research can be done in a standard browser.
 
 We have identified two main gaps in technical infrastructure necessary for a
 full initial realization of this vision:
@@ -235,12 +253,12 @@ full initial realization of this vision:
 \begin{itemize}
 	
 	\item First, while some research studies can be done with data or models
-	that can easily be stored in an ad-hoc format within the hyperpaper itself,
-	large-scale Internet measurement studies need access to large data sets
-	mediated through some interface. This exists for certain data sources (e.g.,
-	the RIPE Atlas API), but a full realization would require the creation and
-	standardization of interfaces for retrieval of data and metadata for each
-	broad type of measurement activity.
+that can easily be stored in an ad-hoc format within the hyperpaper itself,
+large-scale Internet measurement studies need access to large data sets mediated
+through some interface. This exists for certain data sources (e.g., the RIPE
+Atlas and the BGPStream APIs), but a full realization would require the creation
+and standardization of interfaces for retrieval of data and metadata for each
+broad type of measurement activity.
 
 	\item Second, the distribution of rendered versions of papers is currently
 	possible for scientific notebook environments, but these render to a webpage
@@ -261,17 +279,18 @@ initial realization of a hyperpaper platform; see our GitHub organization at
 \url{https://github.com/hyperpaper}.
 
 \begin{acks}
-	This editorial is largely based on discussions at CAIDA's AIMS workshop in
-	March 2018 and Dagstuhl Seminar 18412 on \emph{Encouraging Reproducibility
-	in Scientific Research of the Internet}; we thank the participants for the
-	discussions leading to this work.
+This editorial is largely based on discussions at CAIDA's AIMS 2018 workshop and
+Dagstuhl Seminar 18412 on \emph{Encouraging Reproducibility in Scientific
+Research of the Internet}; we thank the participants for the discussions leading
+to this work.
 \end{acks}
 
-{ \balance
-{
-	\bibliographystyle{ACM-Reference-Format}
+%{ \balance
+%{
+	%\bibliographystyle{ACM-Reference-Format}
+	\bibliographystyle{unsrt}
 	\bibliography{cccp}
-}
-}
+%}
+%}
 
 \end{document}
