@@ -126,19 +126,24 @@ Scientific Research of the Internet`` at Schloss Dagstuhl in October 2018
 which Internet measurement studies are disseminated, that have an impact on
 reproducibility and verifiability of Internet science.
 
-The current publication ecosystem discourages incremental work. Together with an
-academic emphasis on novelty (whether that novelty is of improved utility or
-not), the difficulty of building on existing studies and experiments means few
-researchers bother. Some venues in our field are starting to experiment with
-artefacts such as code and data being submitted together with papers. While this
-is far better than the common status quo of boutique code running on secret
-data, these efforts are recent, and are more suited to address archival
-requirements than those of repeatability and verifiability. 
+\textbf{Problems we are facing today.} The current publication ecosystem
+discourages incremental work, putting disproportionate emphasis on novelty and
+rejecting valid work that `merely' extends previous results. Similarly,
+`unsurprising' results---a subjective measure---are viewed as a good reason to
+reject a submission. High pressure to publish often and at top-tier venues
+leads to few excellent researchers choosing to build on the work of others. As
+a consequence, there is little incentive for them to release artefacts for
+others to work with, either. Some venues in our field are starting to
+experiment with artefacts such as code and data being submitted together with
+papers. While this is far better than the common status quo of boutique code
+running on secret data, these efforts are recent, and are more suited to
+address archival requirements than those of repeatability and verifiability. 
 
-In addition, tooling support is lacking to help reviewers to efficiently verify
-these artefacts as part of the paper review process, for example through
-repetition of experiments or analysis. The difficulty this causes will make it
-difficult to make partial verification of results during review the norm.
+Even when artefacts are provided, problems remain. Tooling support is lacking
+to help reviewers to efficiently verify these artefacts as part of the paper
+review process, for example through repetition of experiments or analysis. The
+difficulty this causes makes it difficult to make partial verification of
+results during review the norm.
 
 A culture of secrecy, both due to conditions of access on proprietary data
 sources as well as to the tradition of establishing academic priority, adds
@@ -161,22 +166,24 @@ publication process.
 
 We propose to leverage recent developments in platforms and tools for data
 science and scientific collaboration to build an experimental publishing
-ecosystem for Internet measurements based on {\em hyperpapers}. The technical details
-of this experiment are left to future work, but the outlines of the properties
-of these papers already seem clear:
+ecosystem for Internet measurements based on {\em hyperpapers}. The technical
+details of this experiment are left to future work, but the outlines of the
+properties of these papers already seem clear:
 
 \textbf{Hyperpapers are self-contained and interactive.} Ideally, a full
 hyperpaper contains all the data from which results, plots, and conclusions in
 the paper are drawn, as well as source code implementing the analytic tasks
-distilling those results from the raw source data. The paper is interactive,
+distilling those results from the raw source data. A hyperpaper is interactive,
 allowing both changes to the raw source data and to the analysis code to be
-reflected in the analytic products (tables, charts, etc) in the paper,
+reflected in the analytic products (tables, charts, etc.) in the paper,
 supporting easy exploratory analysis of a dataset and/or measurement analysis
-methodology as well as incremental changes to published work. In any case, the
-hyperpaper includes one or more rendered versions, both for compatibility with
-existing publishing channels (e.g., PDF) and to minimize the requirements for
-the (perhaps vast majority) of readers who will not want to use the paper's
-interactive features.
+methodology as well as incremental changes to published work. The hyperpaper
+includes one or more rendered versions, both for compatibility with existing
+publishing channels (e.g., PDF) and to minimize the requirements for the of
+readers who will not want to use the paper's interactive features or whose
+devices do not allow it. Accessibility is thus maintained at least at the
+current level, although we emphasize that this is another area where improvemnt
+is needed.
 
 The raw source data may be included with the hyperpaper either by value or by
 reference, and the analysis code can be configured to run either on a local
@@ -185,28 +192,28 @@ credentials to enable their interactivity, in order to support arrangements
 where raw and/or intermediate data is subject to access control.
 
 \textbf{Hyperpapers are multilevel.} The initial view a reader will have of a
-full hyperpaper includes the typical prose of a paper (an abstract,
-introduction, explanation of the question answered, description of the
-methodology, results, graphs, and so on). Analysis products, such as charts and
-tables, can be expanded to show how they were derived.
+full hyperpaper includes the typical prose of a paper (abstract, introduction,
+explanation of the questions answered, description of the methodology, results,
+graphs, and so on). Analysis products, such as charts and tables, can be
+expanded to show how they were derived.
 
-However, the paper can also be expanded in other ways. A section of prose may be
-linked to an alternate view, information for an alternate audience, related
-content, or a drill down on some interesting set of a result. For example, the
+However, the paper can also be expanded in other ways. A section of prose may
+be linked to an alternate view, information for an alternate audience, related
+content, or allow to drill down on some interesting result. For example, the
 paper could contain an executive summary describing the utility of its insights
 for the general public, network operators, regulators, and so on; a methodology
-could be expanded to tell an expanded narrative of roads not taken, and why; or
-an introduction could be expanded with introductory information on a measured
-protocol not necessary for practitioners in the field but useful for students
-just learning it; and so on.  These sorts of expansions would replace the
-creation of multiple papers on a subject to multiple venues,
-e.g.~\cite{Dhamdhere18} and \cite{Clark18}.
+could be expanded to tell an expanded narrative of roads not taken, or
+unsuccessfully taken, and why; or an introduction could be expanded with
+introductory information on a measured protocol not necessary for practitioners
+in the field but useful for students just learning it; and so on.  These sorts
+of expansions would replace the creation of multiple papers on a subject to
+multiple venues, e.g.~\cite{Dhamdhere18} and \cite{Clark18}.
 
 Taken to its logical conclusion, multilevel hyperpapers allow a full explanation
 and report on a research project's activity and the evolution of the chain of
-hypotheses, addressing the death of negative results, while maintaining
+hypotheses, addressing the dearth of negative results, while maintaining
 narrative coherence and conciseness in the paper's main ``trunk'' While this
-throws up new questions, e.g., for page counts and the review process, this
+opens up new questions, e.g., for page counts and the review process, this
 could be addressed by considering all extensions beyond this trunk as appendices
 for review purposes.
 
@@ -218,34 +225,33 @@ simple matter of forking it, given permission to access the data. To the extent
 that the hyperpaper infrastructure is integrated with a collaboration platform,
 papers can become open and living projects, with researchers performing
 associated work, interdisciplinary co-authors writing expansions for specific
-audiences beyond the usual networking conference crowd, and even reviewers
+audiences beyond the usual networking conference audience, and even reviewers
 becoming part of a long-running, data-centered conversation about a particular
-hypothesis of how the Internet is.
+hypothesis of how the Internet works.
 
 \section{How do we get there?}
 \label{sec:how}
 
 As in all things scientific, by standing on the shoulders of giants. While this
-vision may seem like science fiction, akin to mid-century utopian writing about
-hypertext before the rise of the Web, we submit that enough of the underlying
+vision may seem like science fiction, we submit that enough of the underlying
 infrastructure behind this vision exists that rudimentary experimental
 hyperpapers for Internet measurements can be written today.
 
 The perennial problem of setting up environments for data analysis without
-needing to replicate a full toolchain with dependencies from scratch is largely
-solved today by virtualization and containerization tools such as Vagrant and
-Docker. Problems of scale are addressed by the easy (if sometimes costly)
-widespread availability of cloud infrastructure from multiple providers.
-Integration of data analytics with authoring environment interleaving text and
-interactive visualizations is supported by data analysis notebooks such as
-JupyterLab and Apache Zeppelin. GitHub has emerged as the de facto standard for
-integrating version control of digital artefacts with a collaboration
-environment, and its model of working is suited to open collaborative papers as
-we envision them, which have a fair amount in common with the long-running
-open-source projects GitHub was originally built to support. Of course, all of
-these technologies are supported by the web platform, decades of continuous
-investment in which has brought us to a world where almost all of the work of
-research can be done in a standard browser.
+needing to replicate a full toolchain with dependencies from scratch is
+partially solved today by virtualization and containerization tools such as
+Vagrant and Docker. Problems of scale are addressed by the easy (if sometimes
+costly) widespread availability of cloud infrastructure from multiple
+providers.  Integration of data analytics with authoring environment
+interleaving text and interactive visualizations is supported by data analysis
+notebooks such as JupyterLab and Apache Zeppelin. GitHub has emerged as the de
+facto standard for integrating version control of digital artefacts with a
+collaboration environment, and its model of working is suited to open
+collaborative papers as we envision them, which have a fair amount in common
+with the long-running open-source projects GitHub was originally built to
+support. Of course, all of these technologies are supported by the web
+platform, decades of continuous investment in which has brought us to a world
+where almost all of the work of research can be done in a standard browser.
 
 We have identified two main gaps in technical infrastructure necessary for a
 full initial realization of this vision:
@@ -277,6 +283,20 @@ of the technologies we identify as appropriate for hyperpapers. We welcome
 community collaboration as we develop it into an architecture document for an
 initial realization of a hyperpaper platform; see our GitHub organization at
 \url{https://github.com/hyperpaper}.
+
+\textbf{Remove this if not in-scope for CCCP itself.} \textbf{Further impact on
+the publication ecosystem.} Our proposed hyperpaper environments do not
+necessarily need to be hosted on freemium services, whose business models may
+not be sustainable over decades and who may be subject to acquisition (as
+GitHub was bought up by Microsoft)---i.e. the role of archiver is not
+necessarily filled by them very well. However, publishers of journals could
+emerge to add the setup and maintenance of hyperpaper environments as an
+extension of their current business model. We note that the latter is often
+legitimately criticized today as too little value for money, with many
+editorial tasks done by volunteers and archival largely automated. Hyperpapers
+might reintroduce a new, well justified, and legitimate role for academic
+publishing outlets.
+
 
 \begin{acks}
 This editorial is largely based on discussions at CAIDA's AIMS 2018 workshop and
